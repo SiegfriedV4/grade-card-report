@@ -1,17 +1,18 @@
 // src/data/student.ts
 
 export type Student = {
+  id: number;
   name: string;
-  score: number; // 0 - 100
+  grade: number;
 };
 
 export const students: Student[] = [
-  { name: 'Alice Moodley',   score: 92 },
-  { name: 'Brian Nkosi',     score: 74 },
-  { name: 'Carla Swanepoel', score: 55 },
-  { name: 'David Dlamini',   score: 38 },
-  { name: 'Emma Botha',      score: 81 },
-  { name: 'Farai Moyo',      score: 61 },
-  { name: 'Grace Pillay',    score: 49 },
-  { name: 'Hassan Adams',    score: 97 },
+  { id: 1, name: 'Alice Moodley',   grade: 92 },
+  { id: 2, name: 'Brian Nkosi',     grade: 74 },
+  { id: 3, name: 'Carla Swanepoel', grade: 55 },
+  { id: 4, name: 'David Dlamini',   grade: 38 },
+  { id: 5, name: 'Emma Botha',      grade: 81 },
+  { id: 6, name: 'Farai Moyo',      grade: 61 },
+  { id: 7, name: 'Grace Pillay',    grade: 49 },
+  { id: 8, name: 'Hassan Adams',    grade: 97 },
 ];
