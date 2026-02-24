@@ -78,7 +78,7 @@ GRADE-REPORT-CARD/
 ### 💻 Desktop View
 ![Desktop Screenshot](src/assets/screenshots/desktop.png)
 
-> Make sure your screenshots are stored inside:
+> Screenshots are stored inside:
 > `src/assets/screenshots/`
 
 ---
@@ -88,6 +88,7 @@ GRADE-REPORT-CARD/
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/grade-report-card.git
+   SiegfriedV4
    ```
 
 2. Navigate into the project:
