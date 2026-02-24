@@ -1,73 +1,121 @@
-# React + TypeScript + Vite
+# 📊 Grade Report Card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React + TypeScript application that renders a list of student scores and visually represents their grades using color indicators.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Description
 
-## React Compiler
+This application displays an array of students and their scores.  
+Each grade is visually highlighted:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🟢 **Green** → Grade A  
+- 🟡 **Yellow** → Grade B  
+- 🔴 **Red** → Fail  
 
-## Expanding the ESLint configuration
+The goal of this project is to practice:
+- TypeScript types
+- Component structure
+- Utility functions
+- Conditional styling
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🖥 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- React
+- TypeScript
+- JavaScript (ES6 Modules)
+- HTML5
+- CSS3
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📂 Project Structure
+
+```
+GRADE-REPORT-CARD/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   │   └── screenshots/
+│   │
+│   ├── components/
+│   │   └── studentRow.ts
+│   │
+│   ├── data/
+│   │   └── student.ts
+│   │
+│   ├── utils/
+│   │   └── gradeHelper.ts
+│   │
+│   ├── App.tsx
+│   ├── App.css
+│   ├── main.tsx
+│   ├── main.ts
+│   └── styles.css
+│
+├── package.json
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Folder Responsibilities
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **components/** → UI components  
+- **data/** → Student data models  
+- **utils/** → Grade calculation logic  
+- **assets/** → Static files and screenshots  
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 📸 Screenshots
+
+### 📱 Mobile View
+![Mobile Screenshot](src/assets/screenshots/mobile.png)
+
+### 💻 Desktop View
+![Desktop Screenshot](src/assets/screenshots/desktop.png)
+
+> Make sure your screenshots are stored inside:
+> `src/assets/screenshots/`
+
+---
+
+## ⚙ Installation & Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/grade-report-card.git
+   ```
+
+2. Navigate into the project:
+   ```bash
+   cd grade-report-card
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start development server:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🎯 What I Learned
+
+- Structuring a React + TypeScript project
+- Organizing project folders clearly
+
+---
+
+## 🚀 Future Improvements
+
+- Add filtering by grade
+- Add sorting by score
+- Persist student data
