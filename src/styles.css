@@ -1,11 +1,13 @@
 /* src/styles.css */
 
+/* This allows for consistent styling across all elements */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Base styles for the body and container */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #f5f5f5;
@@ -13,11 +15,13 @@ body {
   padding: 32px 20px;
 }
 
+/* The container centers the content and limits its width for better readability */
 .container {
   max-width: 600px;
   margin: 0 auto;
 }
 
+/* This heading style is used for the main title of the page */
 h1 {
   font-size: 28px;
   font-weight: 800;
@@ -25,6 +29,7 @@ h1 {
   margin-bottom: 4px;
 }
 
+/* The subtitle provides additional context and is styled to be less prominent than the main title */
 .subtitle {
   font-size: 13px;
   color: #888;
@@ -32,7 +37,7 @@ h1 {
 }
 
 /* ── Legend ── */
-
+/* The legend explains the colour coding of the grades. It uses flexbox to arrange items in a row with gaps, and wraps to multiple lines if needed. */
 .legend {
   display: flex;
   gap: 8px;
@@ -40,7 +45,8 @@ h1 {
   margin-bottom: 24px;
 }
 
-/* Each legend item reuses the same grade classes as the rows */
+/* The legend spans are styled to look like pills, with padding, rounded corners, and a consistent font size and weight. 
+The background and text colour for each grade are set by the same classes used for the student rows. */
 .legend span {
   padding: 4px 12px;
   border-radius: 20px;
@@ -50,13 +56,14 @@ h1 {
 
 /* ── Student list ── */
 
+/* The student list is a vertical stack of student rows, with a gap between each row. */
 .student-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* Base row style — layout only, no colour here */
+/* The student row is a horizontal container for each student's name, score, and grade */
 .student-row {
   display: flex;
   align-items: center;
@@ -66,11 +73,13 @@ h1 {
   font-size: 15px;
 }
 
+/* The student name is styled to be bold and takes up the remaining space in the row, allowing the score and grade to stay right-aligned. */
 .student-name {
   font-weight: 600;
   flex: 1; /* takes up remaining space so score and grade stay right-aligned */
 }
 
+/* The student score is styled to be smaller and less prominent than the name and grade, with a slight opacity to further de-emphasize it. */
 .student-score {
   color: inherit;
   font-size: 14px;
@@ -78,6 +87,7 @@ h1 {
   opacity: 0.8;
 }
 
+/* The student grade is styled to be bold and slightly larger than the score, with a fixed minimum width to ensure alignment across all rows. */
 .student-grade {
   font-weight: 800;
   font-size: 16px;
@@ -86,8 +96,8 @@ h1 {
 }
 
 /* ── Grade colours ──
-   Each class sets the background and text colour for that grade.
-   getGrade() in gradeHelper.ts returns the right className. */
+  Each class sets the background and text colour for that grade.
+  getGrade() in gradeHelper.ts returns the right className. */
 
 .grade-a {
   background: #dcfce7;
